@@ -3,17 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Archive: 2018/1 | hello tg</title>
+    <title>promise | hello tg</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="hello tg">
-<meta property="og:url" content="https://tg0825.github.io/archives/2018/01/index.html">
+        <meta name="keywords" content="" />
+    
+    <meta name="description" content="Promise객체는 비동기 계산을 위해 사용됩니다. Promise는 아직은 아니지만 나중에 완료될 것으로 기대되는 연산을 표현합니다. 구문1new Promise(/* executor */ function (resolve, reject) &amp;#123; ... &amp;#125;); 매개변수resolve 및 reject 인수를 통해 다른 함수에 전달될 함수 입니다. e">
+<meta property="og:type" content="article">
+<meta property="og:title" content="promise">
+<meta property="og:url" content="https://tg0825.github.io/2018/02/28/promise/index.html">
 <meta property="og:site_name" content="hello tg">
+<meta property="og:description" content="Promise객체는 비동기 계산을 위해 사용됩니다. Promise는 아직은 아니지만 나중에 완료될 것으로 기대되는 연산을 표현합니다. 구문1new Promise(/* executor */ function (resolve, reject) &amp;#123; ... &amp;#125;); 매개변수resolve 및 reject 인수를 통해 다른 함수에 전달될 함수 입니다. e">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-02-27T16:34:05.657Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hello tg">
+<meta name="twitter:title" content="promise">
+<meta name="twitter:description" content="Promise객체는 비동기 계산을 위해 사용됩니다. Promise는 아직은 아니지만 나중에 완료될 것으로 기대되는 연산을 표현합니다. 구문1new Promise(/* executor */ function (resolve, reject) &amp;#123; ... &amp;#125;); 매개변수resolve 및 reject 인수를 통해 다른 함수에 전달될 함수 입니다. e">
     
 
     
@@ -122,74 +128,121 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-archive"></i>Archive: 2018/1
+    uncategorized
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-promise" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>2018</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/01/31/arrow-function/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://tg0825.github.io/2018/01/31/arrow-function/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2018-01-31T14:51:46.000Z" itemprop="datePublished">2018-01-31</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2018/01/31/arrow-function/">arrow function</a>
+        promise
         </h1>
     
 
-        <p class="article-excerpt">
-            화살표 함수 표현(arrow function expression)은 function 표현에 비해 구문이 짧고 자신의 this, arguments, super 또는 new.target을 바인딩 하지 않습니다. 화살표 함수는 항상 익명입니다. 이 함수 표현은 메소드 함수가 아닌 곳에 가장 적당합니다. 그래서 생성자로서 사용할 수 없습니다.
-구문기본 구문1234
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/02/28/promise/" class="article-date">
+            <time datetime="2018-02-27T16:27:39.000Z" itemprop="datePublished">2018-02-28</time>
+        </a>
+    </div>
+
+                
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><code>Promise</code>객체는 비동기 계산을 위해 사용됩니다. <code>Promise</code>는 아직은 아니지만 나중에 완료될 것으로 기대되는 연산을 표현합니다.</p>
+<h1 id="구문"><a href="#구문" class="headerlink" title="구문"></a>구문</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="comment">/* executor */</span> <span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123; ... &#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="매개변수"><a href="#매개변수" class="headerlink" title="매개변수"></a>매개변수</h2><p><code>resolve</code> 및 <code>reject</code> 인수를 통해 다른 함수에 전달될 함수 입니다. <code>executor</code>함수는 <code>resolve</code> 및 <code>reject</code> 함수를 제공하는 promise 구현에 의해 죽시 실행됩니다.</p>
+<h1 id="예"><a href="#예" class="headerlink" title="예"></a>예</h1><h2 id="Promise-생성"><a href="#Promise-생성" class="headerlink" title="Promise 생성"></a>Promise 생성</h2><p><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank" rel="noopener">참조: MDN web docs</a></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://tg0825.github.io/2018/02/28/promise/" data-id="cje5va7e3000519t2vaobphex" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
+    </section>
 
 
                         </div>
@@ -250,6 +303,19 @@
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/02/24/destructuring-assignment/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Destructuring assignment</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -440,11 +506,13 @@
     var disqus_shortname = 'tg0825';
     
     
+    var disqus_url = 'https://tg0825.github.io/2018/02/28/promise/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
