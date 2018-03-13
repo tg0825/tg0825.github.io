@@ -18,7 +18,7 @@
 <meta property="og:description" content="Object.assign()Object.assign() 메소드는 열거할 수 있는 하나 이상의 소스 오브젝트로 부터 타겟 오브젝트로 프로퍼티를 복사하는데 사용됩니다. 그리고, 타겟 오브젝트가 반환될 것입니다. 문법1Object.assign(target, ...sources) 인자target: 타겟 오브젝트sources: 하나 이상의 소스 오브젝트 리턴값타겟">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://tg0825.github.io/images/thumbnail/js.png">
-<meta property="og:updated_time" content="2018-03-13T01:00:33.797Z">
+<meta property="og:updated_time" content="2018-03-13T01:23:18.631Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Object.assign()">
 <meta name="twitter:description" content="Object.assign()Object.assign() 메소드는 열거할 수 있는 하나 이상의 소스 오브젝트로 부터 타겟 오브젝트로 프로퍼티를 복사하는데 사용됩니다. 그리고, 타겟 오브젝트가 반환될 것입니다. 문법1Object.assign(target, ...sources) 인자target: 타겟 오브젝트sources: 하나 이상의 소스 오브젝트 리턴값타겟">
@@ -183,6 +183,7 @@
 <p><code>Object.assign()</code> 메소드는 <code>null</code>이나 <code>undefiend</code>는 반환하지 않으니 주의하세요.</p>
 <h1 id="예제들"><a href="#예제들" class="headerlink" title="예제들"></a>예제들</h1><h2 id="객체-복제하기"><a href="#객체-복제하기" class="headerlink" title="객체 복제하기"></a>객체 복제하기</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">a</span>: <span class="number">1</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> copy = <span class="built_in">Object</span>.assign(&#123;&#125;, obj);</span><br><span class="line"><span class="built_in">console</span>.log(copy); <span class="comment">// &#123;a: 1&#125;</span></span><br></pre></td></tr></table></figure>
 <h2 id="깊은-복제에-대한-주의사항"><a href="#깊은-복제에-대한-주의사항" class="headerlink" title="깊은 복제에 대한 주의사항"></a>깊은 복제에 대한 주의사항</h2><p>깊은 복제에 대해서는 대안적인 방법을 사용할 필요가 있습니다. 왜냐하면, Object.assign()은 타겟 오브젝트에 할당을 할 때, 프로퍼티의 참조를 복사하기 때문입니다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> a = &#123;</span><br><span class="line">        b: &#123;</span><br><span class="line">            c: <span class="number">4</span></span><br><span class="line">        &#125;,</span><br><span class="line">        d: &#123;</span><br><span class="line">            e: &#123;</span><br><span class="line">                f: <span class="number">1</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> g = <span class="built_in">Object</span>.assign(&#123;&#125;, a);</span><br><span class="line">    <span class="keyword">let</span> h = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(a));</span><br><span class="line">    <span class="built_in">console</span>.log(g.d); <span class="comment">// &#123;e: &#123;f: 1&#125;&#125;</span></span><br><span class="line">    g.d.e = <span class="number">32</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'g.d.e set to 32.'</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(g); <span class="comment">// &#123;b: &#123;c: 4&#125;, d: &#123;e: 32&#125;&#125;</span></span><br><span class="line">    <span class="built_in">console</span>.log(a); <span class="comment">// &#123;b: &#123;c: 4&#125;, d: &#123;e: 32&#125;&#125;</span></span><br><span class="line">    <span class="built_in">console</span>.log(h); <span class="comment">// &#123;b: &#123;c: 4&#125;, d: &#123;e: &#123;f: 1&#125;&#125;&#125;</span></span><br><span class="line">    h.d.e = <span class="number">54</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'h.d.e set to 54'</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(g); <span class="comment">// &#123;b: &#123;c: 4&#125;, d: &#123;e: 32&#125;&#125;</span></span><br><span class="line">    <span class="built_in">console</span>.log(a); <span class="comment">// &#123;b: &#123;c: 4&#125;, d: &#123;e: 32&#125;&#125;</span></span><br><span class="line">    <span class="built_in">console</span>.log(h); <span class="comment">// &#123;b: &#123;c: 4&#125;, d: &#123;e: 54&#125;&#125;</span></span><br><span class="line">&#125;</span><br><span class="line">test();</span><br></pre></td></tr></table></figure>
 <p><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/assign" target="_blank" rel="noopener">참조: MDN</a></p>
 
         </div>
@@ -191,7 +192,7 @@
 
 
 
-    <a data-url="https://tg0825.github.io/2018/03/13/assign/" data-id="cjeowwkeb000063t2d8ftkllz" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://tg0825.github.io/2018/03/13/assign/" data-id="cjeoz7f9n0001frqsxwujqu54" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -328,6 +329,16 @@
         
 <nav id="article-nav">
     
+        <a href="/2018/03/13/deepcopy-shallowcopy/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            deepcopy-shallowcopy
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2018/02/28/promise/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
@@ -346,6 +357,26 @@
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/03/13/deepcopy-shallowcopy/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/03/13/deepcopy-shallowcopy/" class="title">deepcopy-shallowcopy</a></p>
+                            <p class="item-date"><time datetime="2018-03-13T01:17:53.000Z" itemprop="datePublished">2018-03-13</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -427,26 +458,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/01/31/arrow-function/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/thumbnail/js.png)" alt="arrow function" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/01/31/arrow-function/" class="title">arrow function</a></p>
-                            <p class="item-date"><time datetime="2018-01-31T14:51:46.000Z" itemprop="datePublished">2018-01-31</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -459,7 +470,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -469,7 +480,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Object/">Object</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/arrow-function/">arrow function</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/assign/">assign</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/class/">class</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/es6/">es6</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/function/">function</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">5</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Object/">Object</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/arrow-function/">arrow function</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/assign/">assign</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/class/">class</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deepcopy/">deepcopy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/es6/">es6</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/function/">function</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shallowcopy/">shallowcopy</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -479,7 +490,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/arrow-function/" style="font-size: 10px;">arrow function</a> <a href="/tags/assign/" style="font-size: 10px;">assign</a> <a href="/tags/class/" style="font-size: 10px;">class</a> <a href="/tags/es6/" style="font-size: 20px;">es6</a> <a href="/tags/function/" style="font-size: 10px;">function</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a>
+            <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/arrow-function/" style="font-size: 10px;">arrow function</a> <a href="/tags/assign/" style="font-size: 10px;">assign</a> <a href="/tags/class/" style="font-size: 10px;">class</a> <a href="/tags/deepcopy/" style="font-size: 10px;">deepcopy</a> <a href="/tags/es6/" style="font-size: 20px;">es6</a> <a href="/tags/function/" style="font-size: 10px;">function</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/shallowcopy/" style="font-size: 10px;">shallowcopy</a>
         </div>
     </div>
 
