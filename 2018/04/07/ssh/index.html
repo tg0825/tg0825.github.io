@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="SSH" />
     
-    <meta name="description" content="SSH(Secure Shell)란 telnet, ftp와 같은 원격 제어 프로그램이다. telnet, ftp와 다른 점은 데이터를 암호화하여 전송하기 때문에 보안적으로 안전하다. 맥과 리눅스 기본적으로 설치되어 있으며, 윈도우는 PuTTY나 Xshell을 통해 사용 가능하다. 접속 방법1$ ssh id@example.com 접속 끊기1$ ssh exit 참">
+    <meta name="description" content="SSH란 Secure Sell의 약자이다. 원격지의 컴퓨터. 즉 멀리 떨어져있는 컴퓨터. 내 컴퓨터가 SSH 클라이언트, 원격에 있는 컴퓨터를 SSH Server라고 부른다. 이것은 Shell로 접근이 가능하고 제어가 가능하다 SSH는 통신 프로토콜이다. 이러한 것들을 SSH라고 부른다. Secure가 붙은 이유는 안전하기 때문이다. 이전에는 telnet으">
 <meta name="keywords" content="SSH">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SSH란 무엇인가?">
 <meta property="og:url" content="https://tg0825.github.io/2018/04/07/ssh/index.html">
 <meta property="og:site_name" content="tg0825">
-<meta property="og:description" content="SSH(Secure Shell)란 telnet, ftp와 같은 원격 제어 프로그램이다. telnet, ftp와 다른 점은 데이터를 암호화하여 전송하기 때문에 보안적으로 안전하다. 맥과 리눅스 기본적으로 설치되어 있으며, 윈도우는 PuTTY나 Xshell을 통해 사용 가능하다. 접속 방법1$ ssh id@example.com 접속 끊기1$ ssh exit 참">
+<meta property="og:description" content="SSH란 Secure Sell의 약자이다. 원격지의 컴퓨터. 즉 멀리 떨어져있는 컴퓨터. 내 컴퓨터가 SSH 클라이언트, 원격에 있는 컴퓨터를 SSH Server라고 부른다. 이것은 Shell로 접근이 가능하고 제어가 가능하다 SSH는 통신 프로토콜이다. 이러한 것들을 SSH라고 부른다. Secure가 붙은 이유는 안전하기 때문이다. 이전에는 telnet으">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://tg0825.github.io/images/thumbnail/lock.jpg">
-<meta property="og:updated_time" content="2018-04-07T12:30:10.390Z">
+<meta property="og:updated_time" content="2018-04-08T07:17:44.362Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSH란 무엇인가?">
-<meta name="twitter:description" content="SSH(Secure Shell)란 telnet, ftp와 같은 원격 제어 프로그램이다. telnet, ftp와 다른 점은 데이터를 암호화하여 전송하기 때문에 보안적으로 안전하다. 맥과 리눅스 기본적으로 설치되어 있으며, 윈도우는 PuTTY나 Xshell을 통해 사용 가능하다. 접속 방법1$ ssh id@example.com 접속 끊기1$ ssh exit 참">
+<meta name="twitter:description" content="SSH란 Secure Sell의 약자이다. 원격지의 컴퓨터. 즉 멀리 떨어져있는 컴퓨터. 내 컴퓨터가 SSH 클라이언트, 원격에 있는 컴퓨터를 SSH Server라고 부른다. 이것은 Shell로 접근이 가능하고 제어가 가능하다 SSH는 통신 프로토콜이다. 이러한 것들을 SSH라고 부른다. Secure가 붙은 이유는 안전하기 때문이다. 이전에는 telnet으">
 <meta name="twitter:image" content="https://tg0825.github.io/images/thumbnail/lock.jpg">
     
 
@@ -169,10 +169,28 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>SSH(Secure Shell)란 telnet, ftp와 같은 원격 제어 프로그램이다. telnet, ftp와 다른 점은 데이터를 암호화하여 전송하기 때문에 보안적으로 안전하다.</p>
+            <p>SSH란 Secure Sell의 약자이다. 원격지의 컴퓨터. 즉 멀리 떨어져있는 컴퓨터. 내 컴퓨터가 SSH 클라이언트, 원격에 있는 컴퓨터를 SSH Server라고 부른다. 이것은 Shell로 접근이 가능하고 제어가 가능하다 SSH는 통신 프로토콜이다. 이러한 것들을 SSH라고 부른다. Secure가 붙은 이유는 안전하기 때문이다. 이전에는 telnet으로 했는데 평문으로 데이터를 주고 받기에 중간에서 데이터를 중간에 캐치할 수 있었다. 보안상 문제가 존재 했다. 클라이언트와 서버는 암호화되어 있기 때문에 가로채도 데이터를 알 수 없게 된다.</p>
 <p>맥과 리눅스 기본적으로 설치되어 있으며, 윈도우는 PuTTY나 Xshell을 통해 사용 가능하다.</p>
+<p>Xshell이란 프로그램이 있다. ssh client역할을 한다. 윈도우는 ssh클라이언트를 제공하지 않기 때문에 외부 프로그램을 사용해야한다. 아이피로 접속하면 컴퓨터에 접속이 가능하다.</p>
+<p>원격지에 있는 컴퓨터를 명령어를 통해서 제어한다.</p>
+<p>맥과 리눅스에는 기본적으로 설치되어 있다. 소프트웨어가 설치가 필요 없다. 윈도우는 클라이언트를 설치해야 한다. putty와 xshell이 있다.</p>
+<p>또한 ssh를 통해 접속하려는 서버는 <code>ssh server</code>가 설치되어 있어야 한다. 맥은 openssh가 설치되어 있기 때문에 ssh 원격으로 역할이 가능하다. 리눅스는 openssh를 설치해야한다.</p>
+<h1 id="MAC에서-SSH-사용법"><a href="#MAC에서-SSH-사용법" class="headerlink" title="MAC에서 SSH 사용법"></a>MAC에서 SSH 사용법</h1><p>접속방법</p>
+<p>$ ssh <a href="mailto:egoing@egoing.net" target="_blank" rel="noopener">egoing@egoing.net</a> 앞의 것은 아이디</p>
+<p>나오는 방법</p>
+<p>$ exit</p>
 <p>접속 방법<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh id@example.com</span><br></pre></td></tr></table></figure></p>
 <p>접속 끊기<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh exit</span><br></pre></td></tr></table></figure></p>
+<h1 id="SSH-Key-비밀번호-없이-로그인"><a href="#SSH-Key-비밀번호-없이-로그인" class="headerlink" title="SSH Key - 비밀번호 없이 로그인"></a>SSH Key - 비밀번호 없이 로그인</h1><p>비밀번호를 입력하지 않거나 비밀번호보다 더 강한 보안수준이 필요할 때 사용한다.</p>
+<p>ssh client에는 private key가 있고</p>
+<p>ssh server에는 public key가 존재한다.</p>
+<ol>
+<li>ssh-keygen을 사용하여 키를 만든다.<br>$ ssh-keygen -t rsa  (-t는 암호화 방식 정하기, rsa로 지정)</li>
+<li>scp를 이용해서 id_rsa.pub을 이동 시킨다.<br>$scp ~/.ssh/id_rsa.pub ssh-server(아이디)@egoing.net:id_rsa.pub</li>
+<li>cat id_rsa.pub &gt;&gt;(리다이렉션) .ssh/authorized_keys 파일 추가 (append) 꺽쇠가 하나면 override임.</li>
+</ol>
+<p>접속시 자세한 정보를 보고 싶으면 <a href="mailto:ssh-server@egoing.net" target="_blank" rel="noopener">ssh-server@egoing.net</a> -v, -vv, -vvv등으로 디버깅이 가능하다</p>
+<p>참고: <a href="https://www.youtube.com/watch?time_continue=4&amp;v=qkGaUqlH47s" target="_blank" rel="noopener">https://www.youtube.com/watch?time_continue=4&amp;v=qkGaUqlH47s</a></p>
 <p><a href="https://opentutorials.org/module/432/3738" target="_blank" rel="noopener">참조: 생활코딩 SSH</a></p>
 
         </div>
@@ -181,7 +199,7 @@
 
 
 
-    <a data-url="https://tg0825.github.io/2018/04/07/ssh/" data-id="cjfpfeu7k000ko9t2ayq6ncv2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://tg0825.github.io/2018/04/07/ssh/" data-id="cjfv82hxm000oejt2cipkjwi0" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -313,7 +331,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a><span class="category-list-count">3</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a><span class="category-list-count">4</span></li></ul>
         </div>
     </div>
 
@@ -323,7 +341,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -334,6 +352,26 @@
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/04/11/http-status/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/web/">web</a></p>
+                            <p class="item-title"><a href="/2018/04/11/http-status/" class="title">http-status</a></p>
+                            <p class="item-date"><time datetime="2018-04-11T14:57:39.000Z" itemprop="datePublished">2018-04-11</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -412,26 +450,6 @@
                             <p class="item-category"></p>
                             <p class="item-title"><a href="/2018/04/01/form/" class="title">form</a></p>
                             <p class="item-date"><time datetime="2018-04-01T06:54:24.000Z" itemprop="datePublished">2018-04-01</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/03/16/hasOwnProperty/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/thumbnail/js.png)" alt="hasOwnProperty" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/javascript/">javascript</a></p>
-                            <p class="item-title"><a href="/2018/03/16/hasOwnProperty/" class="title">hasOwnProperty</a></p>
-                            <p class="item-date"><time datetime="2018-03-16T14:00:37.000Z" itemprop="datePublished">2018-03-16</time></p>
                         </div>
                     </li>
                 
