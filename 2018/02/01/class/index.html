@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <meta charset="utf-8">
     
     <title>Class | Hexo</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="javascript,es6,class">
+        <meta name="keywords" content="javascript,es6,class" />
     
-    <meta name="description" content="Class개요es6에서는 class가 추가 됐습니다. class를 선언하기 위해선 class 키워드를 사용해야 합니다. 123class Human &amp;#123;    // do something&amp;#125;  constructor(생성자)constructor 메소드는 class로 생성된 객체를 생성하고 초기화하기 위한 특수한 메소드입니다. constructor">
-<meta name="keywords" content="javascript,es6,class">
+    <meta name="description" content="Class개요es6에서는 class가 추가 됐습니다. class를 선언하기 위해선 class 키워드를 사용해야 합니다. 123class Human &amp;#123;    &#x2F;&#x2F; do something&amp;#125;  constructor(생성자)constructor 메소드는 class로 생성된 객체를 생성하고 초기화하기 위한 특수한 메소드입니다. constructor">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Class">
 <meta property="og:url" content="https://tg0825.github.io/2018/02/01/class/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Class개요es6에서는 class가 추가 됐습니다. class를 선언하기 위해선 class 키워드를 사용해야 합니다. 123class Human &amp;#123;    // do something&amp;#125;  constructor(생성자)constructor 메소드는 class로 생성된 객체를 생성하고 초기화하기 위한 특수한 메소드입니다. constructor">
-<meta property="og:locale" content="en">
+<meta property="og:description" content="Class개요es6에서는 class가 추가 됐습니다. class를 선언하기 위해선 class 키워드를 사용해야 합니다. 123class Human &amp;#123;    &#x2F;&#x2F; do something&amp;#125;  constructor(생성자)constructor 메소드는 class로 생성된 객체를 생성하고 초기화하기 위한 특수한 메소드입니다. constructor">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://tg0825.github.io/images/thumbnail/js.png">
-<meta property="og:updated_time" content="2018-03-18T05:46:06.137Z">
+<meta property="article:published_time" content="2018-01-31T15:25:27.000Z">
+<meta property="article:modified_time" content="2018-03-18T05:46:06.137Z">
+<meta property="article:author" content="yoon taegun">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="es6">
+<meta property="article:tag" content="class">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Class">
-<meta name="twitter:description" content="Class개요es6에서는 class가 추가 됐습니다. class를 선언하기 위해선 class 키워드를 사용해야 합니다. 123class Human &amp;#123;    // do something&amp;#125;  constructor(생성자)constructor 메소드는 class로 생성된 객체를 생성하고 초기화하기 위한 특수한 메소드입니다. constructor">
 <meta name="twitter:image" content="https://tg0825.github.io/images/thumbnail/js.png">
     
 
@@ -29,26 +31,40 @@
 
     
 
-    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
-    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
 
-    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
     
-    
-        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
-    
-    
-        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
-    
-    
-    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
 
 
-</head>
-</html>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
 <body>
     <div id="wrap">
         <header id="header">
@@ -112,7 +128,9 @@
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
+
 <script src="/js/insight.js"></script>
+
 
 </div>
                         </nav>
@@ -158,7 +176,7 @@
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/class/">class</a>, <a class="tag-link" href="/tags/es6/">es6</a>, <a class="tag-link" href="/tags/javascript/">javascript</a>
+        <a class="tag-link" href="/tags/class/" rel="tag">class</a>, <a class="tag-link" href="/tags/es6/" rel="tag">es6</a>, <a class="tag-link" href="/tags/javascript/" rel="tag">javascript</a>
     </div>
 
             </div>
@@ -181,14 +199,13 @@
 <h2 id="super를-통한-상위-클래스-호출"><a href="#super를-통한-상위-클래스-호출" class="headerlink" title="super를 통한 상위 클래스 호출"></a><code>super</code>를 통한 상위 클래스 호출</h2><p><code>super</code>키워드는 객체의 부모가 가지고 있는 함수들을 호출하기 위해 사용됩니다.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cat</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(name) &#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name || <span class="string">'noname'</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    speak() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name + <span class="string">' makes a noise.'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Lion</span> <span class="keyword">extends</span> <span class="title">Cat</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>() &#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    speak() &#123;</span><br><span class="line">        <span class="keyword">super</span>.speak();</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name + <span class="string">' roars.'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> lion = <span class="keyword">new</span> Lion();</span><br></pre></td></tr></table></figure>
 
-
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="https://tg0825.github.io/2018/02/01/class/" data-id="ck8rcuuqj00024ot24papbu9p" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://tg0825.github.io/2018/02/01/class/" data-id="ck8rdeg6d0002qct2fz6f0ygk" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -256,7 +273,7 @@
     
         
     <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
     </div>
 
     
@@ -324,7 +341,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -335,6 +352,26 @@
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2020/04/08/post/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2020/04/08/post/" class="title">post</a></p>
+                            <p class="item-date"><time datetime="2020-04-08T13:20:01.000Z" itemprop="datePublished">2020-04-08</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -416,26 +453,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/04/01/form/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/04/01/form/" class="title">form</a></p>
-                            <p class="item-date"><time datetime="2018-04-01T06:54:24.000Z" itemprop="datePublished">2018-04-01</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -458,7 +475,7 @@
             <ul>
                 
                     <li>
-                        <a href="http://hexo.io">Hexo</a>
+                        <a href="http://hexo.io" target="_blank" rel="noopener">Hexo</a>
                     </li>
                 
             </ul>
@@ -508,25 +525,47 @@
 
 
     
-        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
     
     
-        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
     
     
 
 
 
 <!-- Custom Scripts -->
+
 <script src="/js/main.js"></script>
+
 
     </div>
 </body>

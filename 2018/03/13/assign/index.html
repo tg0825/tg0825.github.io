@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <meta charset="utf-8">
     
     <title>Object.assign() | Hexo</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="javascript,es6,Object,assign">
+        <meta name="keywords" content="javascript,es6,Object,assign" />
     
     <meta name="description" content="Object.assign()Object.assign() 메소드는 열거할 수 있는 하나 이상의 소스 오브젝트로 부터 타겟 오브젝트로 프로퍼티를 복사하는데 사용됩니다. 그리고, 타겟 오브젝트가 반환될 것입니다. 문법1Object.assign(target, ...sources)  인자target: 타겟 오브젝트sources: 하나 이상의 소스 오브젝트 리턴값타겟">
-<meta name="keywords" content="javascript,es6,Object,assign">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Object.assign()">
 <meta property="og:url" content="https://tg0825.github.io/2018/03/13/assign/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Object.assign()Object.assign() 메소드는 열거할 수 있는 하나 이상의 소스 오브젝트로 부터 타겟 오브젝트로 프로퍼티를 복사하는데 사용됩니다. 그리고, 타겟 오브젝트가 반환될 것입니다. 문법1Object.assign(target, ...sources)  인자target: 타겟 오브젝트sources: 하나 이상의 소스 오브젝트 리턴값타겟">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://tg0825.github.io/images/thumbnail/js.png">
-<meta property="og:updated_time" content="2018-03-18T05:46:06.137Z">
+<meta property="article:published_time" content="2018-03-13T00:21:23.000Z">
+<meta property="article:modified_time" content="2018-03-18T05:46:06.137Z">
+<meta property="article:author" content="yoon taegun">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="es6">
+<meta property="article:tag" content="Object">
+<meta property="article:tag" content="assign">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Object.assign()">
-<meta name="twitter:description" content="Object.assign()Object.assign() 메소드는 열거할 수 있는 하나 이상의 소스 오브젝트로 부터 타겟 오브젝트로 프로퍼티를 복사하는데 사용됩니다. 그리고, 타겟 오브젝트가 반환될 것입니다. 문법1Object.assign(target, ...sources)  인자target: 타겟 오브젝트sources: 하나 이상의 소스 오브젝트 리턴값타겟">
 <meta name="twitter:image" content="https://tg0825.github.io/images/thumbnail/js.png">
     
 
@@ -29,26 +32,40 @@
 
     
 
-    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
-    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
 
-    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
     
-    
-        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
-    
-    
-        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
-    
-    
-    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
 
 
-</head>
-</html>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
 <body>
     <div id="wrap">
         <header id="header">
@@ -112,7 +129,9 @@
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
+
 <script src="/js/insight.js"></script>
+
 
 </div>
                         </nav>
@@ -158,7 +177,7 @@
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Object/">Object</a>, <a class="tag-link" href="/tags/assign/">assign</a>, <a class="tag-link" href="/tags/es6/">es6</a>, <a class="tag-link" href="/tags/javascript/">javascript</a>
+        <a class="tag-link" href="/tags/Object/" rel="tag">Object</a>, <a class="tag-link" href="/tags/assign/" rel="tag">assign</a>, <a class="tag-link" href="/tags/es6/" rel="tag">es6</a>, <a class="tag-link" href="/tags/javascript/" rel="tag">javascript</a>
     </div>
 
             </div>
@@ -181,6 +200,8 @@
 <h2 id="깊은-복제에-대한-주의사항"><a href="#깊은-복제에-대한-주의사항" class="headerlink" title="깊은 복제에 대한 주의사항"></a>깊은 복제에 대한 주의사항</h2><p>깊은 복제에 대해서는 대안적인 방법을 사용할 필요가 있습니다. 왜냐하면, Object.assign()은 타겟 오브젝트에 할당을 할 때, 프로퍼티의 참조를 복사하기 때문입니다.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> a = &#123;</span><br><span class="line">        b: &#123;</span><br><span class="line">            c: <span class="number">4</span></span><br><span class="line">        &#125;,</span><br><span class="line">        d: &#123;</span><br><span class="line">            e: &#123;</span><br><span class="line">                f: <span class="number">1</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> g = <span class="built_in">Object</span>.assign(&#123;&#125;, a);</span><br><span class="line">    <span class="keyword">let</span> h = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(a));</span><br><span class="line">    <span class="built_in">console</span>.log(g.d); <span class="comment">// &#123;e: &#123;f: 1&#125;&#125;</span></span><br><span class="line">    g.d.e = <span class="number">32</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'g.d.e set to 32.'</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(g); <span class="comment">// &#123;b: &#123;c: 4&#125;, d: &#123;e: 32&#125;&#125;</span></span><br><span class="line">    <span class="built_in">console</span>.log(a); <span class="comment">// &#123;b: &#123;c: 4&#125;, d: &#123;e: 32&#125;&#125;</span></span><br><span class="line">    <span class="built_in">console</span>.log(h); <span class="comment">// &#123;b: &#123;c: 4&#125;, d: &#123;e: &#123;f: 1&#125;&#125;&#125;</span></span><br><span class="line">    h.d.e = <span class="number">54</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'h.d.e set to 54'</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(g); <span class="comment">// &#123;b: &#123;c: 4&#125;, d: &#123;e: 32&#125;&#125;</span></span><br><span class="line">    <span class="built_in">console</span>.log(a); <span class="comment">// &#123;b: &#123;c: 4&#125;, d: &#123;e: 32&#125;&#125;</span></span><br><span class="line">    <span class="built_in">console</span>.log(h); <span class="comment">// &#123;b: &#123;c: 4&#125;, d: &#123;e: 54&#125;&#125;</span></span><br><span class="line">&#125;</span><br><span class="line">test();</span><br></pre></td></tr></table></figure>
 
+
+
 <p><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/assign" target="_blank" rel="noopener">참조: MDN</a></p>
 
         </div>
@@ -189,7 +210,7 @@
 
 
 
-    <a data-url="https://tg0825.github.io/2018/03/13/assign/" data-id="ck8rcuuqg00014ot2dvflgseo" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://tg0825.github.io/2018/03/13/assign/" data-id="ck8rdeg6a0001qct235dydb1d" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -257,7 +278,7 @@
     
         
     <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
     </div>
 
     
@@ -331,7 +352,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -342,6 +363,26 @@
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2020/04/08/post/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2020/04/08/post/" class="title">post</a></p>
+                            <p class="item-date"><time datetime="2020-04-08T13:20:01.000Z" itemprop="datePublished">2020-04-08</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -423,26 +464,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/04/01/form/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/04/01/form/" class="title">form</a></p>
-                            <p class="item-date"><time datetime="2018-04-01T06:54:24.000Z" itemprop="datePublished">2018-04-01</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -465,7 +486,7 @@
             <ul>
                 
                     <li>
-                        <a href="http://hexo.io">Hexo</a>
+                        <a href="http://hexo.io" target="_blank" rel="noopener">Hexo</a>
                     </li>
                 
             </ul>
@@ -515,25 +536,47 @@
 
 
     
-        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
     
     
-        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
     
     
 
 
 
 <!-- Custom Scripts -->
+
 <script src="/js/main.js"></script>
+
 
     </div>
 </body>

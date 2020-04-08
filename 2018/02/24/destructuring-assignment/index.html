@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <meta charset="utf-8">
     
     <title>Destructuring assignment | Hexo</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="javascript,es6">
+        <meta name="keywords" content="javascript,es6" />
     
-    <meta name="description" content="비구조화 할당(destructuring assignment) 구문은 배열의 값이나 객체의 속성을 별개의 변수로 추출할 수 있게 하는 자바스크립트 식(expression)입니다. 구문12345678910111213141516171819var a, b, rest;[a, b] = [10, 20];console.log(a); // 10console.log(b);">
-<meta name="keywords" content="javascript,es6">
+    <meta name="description" content="비구조화 할당(destructuring assignment) 구문은 배열의 값이나 객체의 속성을 별개의 변수로 추출할 수 있게 하는 자바스크립트 식(expression)입니다. 구문12345678910111213141516171819var a, b, rest;[a, b] &#x3D; [10, 20];console.log(a); &#x2F;&#x2F; 10console.log(b);">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Destructuring assignment">
 <meta property="og:url" content="https://tg0825.github.io/2018/02/24/destructuring-assignment/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="비구조화 할당(destructuring assignment) 구문은 배열의 값이나 객체의 속성을 별개의 변수로 추출할 수 있게 하는 자바스크립트 식(expression)입니다. 구문12345678910111213141516171819var a, b, rest;[a, b] = [10, 20];console.log(a); // 10console.log(b);">
-<meta property="og:locale" content="en">
+<meta property="og:description" content="비구조화 할당(destructuring assignment) 구문은 배열의 값이나 객체의 속성을 별개의 변수로 추출할 수 있게 하는 자바스크립트 식(expression)입니다. 구문12345678910111213141516171819var a, b, rest;[a, b] &#x3D; [10, 20];console.log(a); &#x2F;&#x2F; 10console.log(b);">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://tg0825.github.io/images/thumbnail/js.png">
-<meta property="og:updated_time" content="2018-03-18T05:46:51.071Z">
+<meta property="article:published_time" content="2018-02-24T04:49:38.000Z">
+<meta property="article:modified_time" content="2018-03-18T05:46:51.071Z">
+<meta property="article:author" content="yoon taegun">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="es6">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Destructuring assignment">
-<meta name="twitter:description" content="비구조화 할당(destructuring assignment) 구문은 배열의 값이나 객체의 속성을 별개의 변수로 추출할 수 있게 하는 자바스크립트 식(expression)입니다. 구문12345678910111213141516171819var a, b, rest;[a, b] = [10, 20];console.log(a); // 10console.log(b);">
 <meta name="twitter:image" content="https://tg0825.github.io/images/thumbnail/js.png">
     
 
@@ -29,26 +30,40 @@
 
     
 
-    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
-    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
 
-    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
     
-    
-        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
-    
-    
-        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
-    
-    
-    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
 
 
-</head>
-</html>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
 <body>
     <div id="wrap">
         <header id="header">
@@ -112,7 +127,9 @@
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
+
 <script src="/js/insight.js"></script>
+
 
 </div>
                         </nav>
@@ -158,7 +175,7 @@
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/es6/">es6</a>, <a class="tag-link" href="/tags/javascript/">javascript</a>
+        <a class="tag-link" href="/tags/es6/" rel="tag">es6</a>, <a class="tag-link" href="/tags/javascript/" rel="tag">javascript</a>
     </div>
 
             </div>
@@ -170,14 +187,11 @@
 
 <h1 id="설명"><a href="#설명" class="headerlink" title="설명"></a>설명</h1><p>객체 및 배열 리터럴 식은 즉석에서 쉽게 데이터 패키지를 만들 수 있도록 합니다.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br></pre></td></tr></table></figure>
-
 <p>비구조화 할당은 비슷한 구문이지만, 할당문의 좌변에 원래 변수에서 어떤 값들을 추출할지 정의합니다.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">var</span> [y, z] = x;</span><br><span class="line"><span class="built_in">console</span>.log(y); <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(z); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
-
 <p>이 기능은 Perl이나 Python 같은 언어에 존재하는 것과 비슷합니다.</p>
 <h1 id="배열-비구조화"><a href="#배열-비구조화" class="headerlink" title="배열 비구조화"></a>배열 비구조화</h1><h2 id="기본값"><a href="#기본값" class="headerlink" title="기본값"></a>기본값</h2><p>배열 인자의 값이 undefiend인 경우에는 기본값을 할당할 수 있습니다.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a, b;</span><br><span class="line">[a = <span class="number">5</span>, b = <span class="number">7</span>] = [<span class="number">1</span>];</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">// 7</span></span><br></pre></td></tr></table></figure>
-
 <h2 id="변수에-배열의-나머지를-할당하기"><a href="#변수에-배열의-나머지를-할당하기" class="headerlink" title="변수에 배열의 나머지를 할당하기"></a>변수에 배열의 나머지를 할당하기</h2><p>비구조화 할당시, rest패턴을 이용해 배열의 남은 부분을 변수 하나에 할당할 수 있습니다.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> [a, ...b] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">// [2, 3]</span></span><br></pre></td></tr></table></figure>
 
@@ -185,7 +199,6 @@
 
 <h2 id="선언-없는-할당"><a href="#선언-없는-할당" class="headerlink" title="선언 없는 할당"></a>선언 없는 할당</h2><p>변수의 선언과 분리하여 변수에 값을 할당할 수 있습니다.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a, b;</span><br><span class="line">(&#123;a, b&#125; = &#123;<span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span>&#125;);</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>할당 문을 둘러싼 <code>( .. )</code>는 선언 없이 객체 리터럴 비구조화 할당을 사용할 때 필요한 구문입니다.<br><code>{a, b} = {a:1 ,b:2}</code>는 유효한 독립 구문이 아닙니다. 좌변의 {a, b}이 블록으로 간주되고 객체 리터럴이 아니기 때문입니다.<br>그러나 <code>({a, b} = {a:1, b:2})</code>는 유효한데, <code>var {a, b} = {a:1 , b:2}</code>의 형태와 같습니다.<br><code>참고: ( .. ) 표현식 앞에 세미콜론이 없다면 이전 줄에 있는 함수 실행을 위해 이용될 수 있습니다.</code></p>
 </blockquote>
@@ -197,10 +210,8 @@
 <h2 id="기본값을-제공하여-새로운-변수-이름으로-할당하기"><a href="#기본값을-제공하여-새로운-변수-이름으로-할당하기" class="headerlink" title="기본값을 제공하여 새로운 변수 이름으로 할당하기"></a>기본값을 제공하여 새로운 변수 이름으로 할당하기</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> &#123;<span class="attr">a</span>:aa = <span class="number">10</span>, <span class="attr">b</span>:bb = <span class="number">5</span>&#125; = &#123;<span class="attr">a</span>: <span class="number">3</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(aa); <span class="comment">// 3</span></span><br><span class="line"><span class="built_in">console</span>.log(bb); <span class="comment">// 5</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="중첩-객체-및-배열-비구조화"><a href="#중첩-객체-및-배열-비구조화" class="headerlink" title="중첩 객체 및 배열 비구조화"></a>중첩 객체 및 배열 비구조화</h2><h2 id="함수-매개변수로-전달된-객체에서-필드-가져오기"><a href="#함수-매개변수로-전달된-객체에서-필드-가져오기" class="headerlink" title="함수 매개변수로 전달된 객체에서 필드 가져오기"></a>함수 매개변수로 전달된 객체에서 필드 가져오기</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">userId</span>(<span class="params">&#123;id&#125;</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> id;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">whois</span>(<span class="params">&#123;displayName: displayName, fullName: &#123;firstName: name&#125;&#125;</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(displayName + <span class="string">' is '</span> + name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> user = &#123;</span><br><span class="line">    id: <span class="number">42</span>,</span><br><span class="line">    displayName: <span class="string">'jdoe'</span>,</span><br><span class="line">    fullName: &#123;</span><br><span class="line">        firstName: <span class="string">'John'</span>,</span><br><span class="line">        lastName: <span class="string">'Doe'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'userId: '</span> + userId(user)); <span class="comment">// 'userId: 42'</span></span><br><span class="line">whois(user);  <span class="comment">// 'jdoe is John'</span></span><br></pre></td></tr></table></figure>
-
 <h2 id="객체-비구조화시-나머지-rest"><a href="#객체-비구조화시-나머지-rest" class="headerlink" title="객체 비구조화시 나머지 (rest)"></a>객체 비구조화시 나머지 (rest)</h2><p><a href="https://github.com/tc39/proposal-object-rest-spread" target="_blank" rel="noopener">Rest/Spread Properties for ECMAScript</a> 제안 (stage 3)은 나머지 (rest) 구문을 비구조화에 추가합니다. 나머지 속성 구문은 비구조화를 추출하고 남은 객체의 enumerable한 속성들을 모두 모아줍니다.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123;a, b, ...rest&#125; = &#123;<span class="attr">a</span>: <span class="number">10</span>, <span class="attr">b</span>: <span class="number">20</span>, <span class="attr">c</span>: <span class="number">30</span>, <span class="attr">d</span>: <span class="number">40</span>&#125;</span><br><span class="line">a; <span class="comment">// 10</span></span><br><span class="line">b; <span class="comment">// 20</span></span><br><span class="line">rest; <span class="comment">// &#123;c: 30, d: 40&#125;</span></span><br></pre></td></tr></table></figure>
-
 
         </div>
         <footer class="article-footer">
@@ -208,7 +219,7 @@
 
 
 
-    <a data-url="https://tg0825.github.io/2018/02/24/destructuring-assignment/" data-id="ck8rcuuql00044ot2wfc0jew9" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://tg0825.github.io/2018/02/24/destructuring-assignment/" data-id="ck8rdeg6f0004qct20ieddmpl" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -276,7 +287,7 @@
     
         
     <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
     </div>
 
     
@@ -350,7 +361,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -361,6 +372,26 @@
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2020/04/08/post/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2020/04/08/post/" class="title">post</a></p>
+                            <p class="item-date"><time datetime="2020-04-08T13:20:01.000Z" itemprop="datePublished">2020-04-08</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -442,26 +473,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/04/01/form/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/04/01/form/" class="title">form</a></p>
-                            <p class="item-date"><time datetime="2018-04-01T06:54:24.000Z" itemprop="datePublished">2018-04-01</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -484,7 +495,7 @@
             <ul>
                 
                     <li>
-                        <a href="http://hexo.io">Hexo</a>
+                        <a href="http://hexo.io" target="_blank" rel="noopener">Hexo</a>
                     </li>
                 
             </ul>
@@ -534,25 +545,47 @@
 
 
     
-        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
     
     
-        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
     
     
 
 
 
 <!-- Custom Scripts -->
+
 <script src="/js/main.js"></script>
+
 
     </div>
 </body>
